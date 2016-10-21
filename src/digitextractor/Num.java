@@ -8,11 +8,10 @@ package digitextractor;
 
 /**
  *
- * @author chhit5249
+ * @author Chris Hitchcock
  */
 public class Num {
     private int num;
-    private static int hunInt = 3, tenInt = 2, oneInt = 1;
     private String hun, ten, one;
     private char hunChar, tenChar, oneChar;
     
@@ -24,7 +23,7 @@ public class Num {
     public String Hundreds()
     {
         hun = Integer.toString(num);
-        new StringBuilder(hun).reverse().toString();
+        hun = new StringBuilder(hun).reverse().toString();
         hunChar = hun.charAt(2);
         String output = "The hundreds place number is: "+hunChar;
         return output; 
@@ -33,7 +32,7 @@ public class Num {
     public String Tens()
     {
         ten = Integer.toString(num);
-        new StringBuilder(ten).reverse().toString();
+        ten = new StringBuilder(ten).reverse().toString();
         tenChar = ten.charAt(1);
         String output = "The tens place number is: "+tenChar;
         return output; 
@@ -42,7 +41,7 @@ public class Num {
     public String Ones()
     {
         one = Integer.toString(num);
-        new StringBuilder(one).reverse().toString();
+        one = new StringBuilder(one).reverse().toString();
         oneChar = one.charAt(0);
         String output = "The ones place number is: "+oneChar;
         return output; 
